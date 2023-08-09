@@ -10,6 +10,6 @@ module "DPSTerraformRole" {
 
   trusted_role_arns = [
     "arn:aws:iam::${var.nonprod_account_id}:root",
-    "arn:aws:iam::${var.prod_account_id}:root",
+    # "arn:aws:iam::${var.prod_account_id}:root",
   ]
 }

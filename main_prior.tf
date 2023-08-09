@@ -11,7 +11,7 @@ module "DPSTeamMemberGroup" {
 
   assumable_roles = [
     "arn:aws:iam::${var.nonprod_account_id}:role/*",
-    "arn:aws:iam::${var.prod_account_id}:role/*"
+    # "arn:aws:iam::${var.prod_account_id}:role/*"
   ]
 }
 

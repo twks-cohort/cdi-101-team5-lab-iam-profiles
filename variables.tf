@@ -14,10 +14,10 @@ variable "account_id" {
   sensitive   = true
 }
 
-variable "prod_account_id" {
-  type        = string
-  sensitive   = true
-}
+# variable "prod_account_id" {
+#   type        = string
+#   sensitive   = true
+# }
 
 variable "nonprod_account_id" {
   type        = string
