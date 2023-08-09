@@ -41,14 +41,14 @@ module "DPSProdServiceAccountGroup" {
 # to assume any role in any platform account. Where the platform teams individual
 # access is managed through an idp federation then this functionality may need to
 # be created by the IAM team who managed the federation.
-module "DPSCoreLabsTeamGroup" {
-  count = var.create_iam_profiles ? 1 : 0
-  source  = "terraform-aws-modules/iam/aws//modules/iam-group-with-assumable-roles-policy"
-  version = "~> 5.1"
+# module "DPSCoreLabsTeamGroup" {
+#   count = var.create_iam_profiles ? 1 : 0
+#   source  = "terraform-aws-modules/iam/aws//modules/iam-group-with-assumable-roles-policy"
+#   version = "~> 5.1"
 
-  name = "DPSCoreLabsTeamGroup"
-  assumable_roles = local.all_roles
-}
+#   name = "DPSCoreLabsTeamGroup"
+#   assumable_roles = local.all_roles
+# }
 
 
 
