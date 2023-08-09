@@ -132,9 +132,9 @@ workflows:
                 account: nonprod
           after-terraform:
             - do/circle-deploy
-            - do/slack-webhook:
-                message: lab-iam-profile nonprod deployment
-                webhook-url: $LAB_EVENTS_CHANNEL_WEBHOOK
+            # - do/slack-webhook:
+            #     message: lab-iam-profile nonprod deployment
+            #     webhook-url: $LAB_EVENTS_CHANNEL_WEBHOOK
           requires:
             - approve nonprod changes
           filters: *on-push-main
@@ -179,9 +179,9 @@ workflows:
                 account: prod
           after-terraform:
             - do/circle-deploy
-            - do/slack-webhook:
-                message: lab-iam-profile prod release
-                webhook-url: $LAB_EVENTS_CHANNEL_WEBHOOK
+            # - do/slack-webhook:
+            #     message: lab-iam-profile prod release
+            #     webhook-url: $LAB_EVENTS_CHANNEL_WEBHOOK
           requires:
             - approve prod changes
           filters: *on-tag-main
