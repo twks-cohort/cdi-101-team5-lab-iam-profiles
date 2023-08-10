@@ -11,9 +11,9 @@ terraform {
 
   backend "remote" {
     hostname     = "app.terraform.io"
-    organization = "twdps"
+    organization = "twks-cohort"
     workspaces {
-      prefix = "lab-iam-profiles-"
+      prefix = "cdi-101-team5-lab-iam-profiles-"
     }
   }
 }
